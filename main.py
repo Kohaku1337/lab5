@@ -53,7 +53,7 @@ def print_logs(logs):
     for url in logs:
         count = len(logs[url])
         table.rows.append([url, count, (count * 100 / total_count),
-                           sum(logs[url]) / count, statistics.mean(logs[url]), max(logs[url])])
+                           sum(logs[url]) / count, statistics.median(logs[url]), max(logs[url])])
     table.rows.append(columns)
     print('Table Loading...')
     print(table)
